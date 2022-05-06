@@ -27,7 +27,7 @@ La refactorización es el proceso de mejorar el código `sin alterar su comporta
 
 ### 4 - `Nombres`
 
--   Arrays
+#### 4.1 - Arrays
 
 ```js
 // mal
@@ -40,7 +40,7 @@ const fruits = ["manzana", "plátano", "fresa"];
 const fruitNames = ["manzana", "plátano", "fresa"];
 ```
 
--   Booleans
+#### 4.2 Booleans
 
 **is, has, can** dan valor semántico.
 
@@ -64,7 +64,7 @@ const isEmpty = true;
 
 Si dedicamos un más de unos segundos para averiguar que tipo de dato contiene una variable, es un nombre MALO.
 
--   Números
+#### 4.3 Números
 
 **min, max, total**
 
@@ -79,9 +79,9 @@ const totalFruits = 3;
 const totalOfFruit = 6;
 ```
 
--   Funciones
+#### 4.4 Funciones
 
-El nombre de la función deben de representar acciones, con el verbo con represnta la acción junto con un sustantivo. Debe de expresar lo que hace especifíficamente.
+El nombre de la función deben de representar acciones, con el verbo con representa la acción junto con un sustantivo. Debe de expresar lo que hace especifíficamente.
 
 ```js
 // mal
@@ -94,3 +94,29 @@ createUSer();
 updateUser();
 sendEmail();
 ```
+
+-   Limitar a 3 parámetos posicionales.
+-   Ordenar de manera alfabética.
+-   Simplicidad es fundamental.
+-   Tamaño reducido.
+-   Funciones de una sola línea.
+-   Menos de 20 líneas.
+-   Evitar el uso del else.
+-   Priorizar el uso de condicionales ternarios.
+
+#### 4.5 Clases
+
+-   Nombres formados con un sustantivo o frases de un sustantivo.
+-   Evitar nombres genéricos (las clases acaban haciendo demasiado).
+-   El nombre es lo más importante de la clase.
+-   UpperCamelCase.
+
+### 5 - `DRY`
+
+**Don't repeat yourself**.
+
+-   Evitar duplicidad de código.
+-   Simplificar tests.
+-   Ayuda a centralizar procesos.
+-   Aplicar el principio DRY usualmente lleva a refactorizar.
+-   Tratar de que las funciones sean fáciles de leer y cumplan con lo establecido.
