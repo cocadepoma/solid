@@ -22,6 +22,18 @@
   - [2.6 Duplicidad de código](#26-duplicidad-de-código)
     - [2.6.1 Duplicidad Real](#261-duplicidad-real)
     - [2.6.2 Duplicidad Accidental](#262-duplicidad-accidental)
+- [3 - Otros olores](#3---otros-olores)
+  - [3.1 - Inflación](#31---inflación)
+    - [3.1.1 - Métodos](#311---métodos)
+    - [3.1.2 - Clases](#312---clases)
+    - [3.1.3 - Obesisión primitiva](#313---obesisión-primitiva)
+    - [3.1.4 - Lista larga de parámetros](#314---lista-larga-de-parámetros)
+  - [3.2 - Acopladores](#32---acopladores)
+    - [3.2.1 - Feature Envy](#321---feature-envy)
+    - [3.2.2 - Intimidad inapropiada](#322---intimidad-inapropiada)
+    - [3.2.3 - Cadena de mensajes](#323---cadena-de-mensajes)
+    - [3.2.4 - The Middle Man](#324---the-middle-man)
+- [4 - SOLID](#4---solid)
 
 ## 1 - Clean Code
 
@@ -266,3 +278,51 @@ La complejidad es inherente al problema
 -   Código luce similar pero cumple funciones distintas.
 -   Cuando hay un cambio, sólo hay que modificar un sólo lugar
 -   Este tipo de duplicidad se puede trabajar con parámetros u optimizaciones.
+
+## 3 - Otros olores
+
+### 3.1 - Inflación
+
+#### 3.1.1 - Métodos
+
+Usualmente siempre se agrega algo a un método o función pero casi nunca se quita nada. Esto deriva en "bestias de gran tamaño".
+
+Buscaremos cortar ese método en submétodos. Perdemos rendimientos con esto, pero en la mayoría de los casos, el código es tan insignificante que no debemos preocuparnos por ello.
+
+#### 3.1.2 - Clases
+
+Clases que se van hinchando y creciendo y acaba siendo una clase "con muchos sombreros", es decir una clase que hace de todo.
+
+#### 3.1.3 - Obesisión primitiva
+
+Nacen en momentos de debilidad, cuando tenemos una urgencia. Es más fácil de crear un campo nuevo que crear una clase o nuevo módulo.
+
+#### 3.1.4 - Lista larga de parámetros
+
+Una función o método no debería de recibir más de 3 o 4 parámetros.
+
+En lugar de pasar 5 parámetros, pasar un objeto con esos parámetros agrupados.
+
+### 3.2 - Acopladores
+
+Todos los olores de este grupo contribuyen al acoplamiento excesivo entre clases o muestran lo que sucede si el acoplamiento se reemplaza por una delegación excesiva.
+
+#### 3.2.1 - Feature Envy
+
+Un método, módulo o clase accede a los datos de otro objeto, más que sus propios datos.
+
+#### 3.2.2 - Intimidad inapropiada
+
+Cuando una clase usa campos y métodos internos de otra clase. Las clases que pasan demasiado juntas, es señal de que hay un tipo de problema.
+
+#### 3.2.3 - Cadena de mensajes
+
+Tenemos una función A, que llama a B, que B llama a C y C llama a D.
+
+Estas cadenas que el cliente depende de la navegación a lo largo de la estructura de clases o módulos.
+
+#### 3.2.4 - The Middle Man
+
+Clases o métodos que delegan en otras clases o métodos.
+
+## 4 - SOLID
