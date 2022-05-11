@@ -34,6 +34,11 @@
     - [3.2.3 - Cadena de mensajes](#323---cadena-de-mensajes)
     - [3.2.4 - The Middle Man](#324---the-middle-man)
 - [4 - SOLID](#4---solid)
+  - [4.1 - S - Single Responsibility Principle (SRP)](#41---s---single-responsibility-principle-srp)
+  - [4.1 - O - Open/Closed Principle (OCP)](#41---o---openclosed-principle-ocp)
+  - [4.1 - L - Liskov Substitution Principle (LSP)](#41---l---liskov-substitution-principle-lsp)
+  - [4.1 - I - Interface Segregation Principle (ISP)](#41---i---interface-segregation-principle-isp)
+  - [4.1 - D - Dependency Inversion Principle (DIP)](#41---d---dependency-inversion-principle-dip)
 
 ## 1 - Clean Code
 
@@ -326,3 +331,22 @@ Estas cadenas que el cliente depende de la navegación a lo largo de la estructu
 Clases o métodos que delegan en otras clases o métodos.
 
 ## 4 - SOLID
+
+Los principios son RECOMENDACIONES.
+Los principios de SOLID nos indican cómo organizar nuestras funciones y estructuras de datos en componentes y cómo dichos componentes deben estar interconectados.
+
+### 4.1 - S - Single Responsibility Principle (SRP)
+
+Responsibilidad Única.
+
+Nunca debería de haber más de un motivo por el cual cambiar una clase o módulo.
+
+Tener una única responsabilidad no es sinónimo de hacer una única cosa. No se basa en crear clases con un sólo método si no en diseñar componentes que esten expuesto a sólo una fuente de cambio.
+
+### 4.1 - O - Open/Closed Principle (OCP)
+
+### 4.1 - L - Liskov Substitution Principle (LSP)
+
+### 4.1 - I - Interface Segregation Principle (ISP)
+
+### 4.1 - D - Dependency Inversion Principle (DIP)
