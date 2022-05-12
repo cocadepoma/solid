@@ -337,13 +337,27 @@ Los principios de SOLID nos indican cómo organizar nuestras funciones y estruct
 
 ### 4.1 - S - Single Responsibility Principle (SRP)
 
-Responsibilidad Única.
+Responsibilidad Única. Deben de centrarse en una tarea y hacerla bien.
 
 Nunca debería de haber más de un motivo por el cual cambiar una clase o módulo.
 
 Tener una única responsabilidad no es sinónimo de hacer una única cosa. No se basa en crear clases con un sólo método si no en diseñar componentes que esten expuesto a sólo una fuente de cambio.
 
+Para detectar violaciones de la responsabilidad:
+
+-   Nombres de clases y módulos demasiado genéricos.
+-   Cambios en el código suelen afectar la clase o módulo.
+-   La clase involucra múltiples capas. (UI, API, Files).
+-   Número elevevado de importaciones.
+-   Cantidad elevada de métodos públicos.
+
 ### 4.1 - O - Open/Closed Principle (OCP)
+
+Es un principio que depende mucho del contexto.
+
+Establece que las entidades de software (clases, módulos, métodos) deben estar abiertas para la extensión, pero cerradas para la modificación.
+
+Se puede lograr también mediante el uso de herencia o mediante patrones de diseó de composición o el patrón de estrategia.
 
 ### 4.1 - L - Liskov Substitution Principle (LSP)
 
