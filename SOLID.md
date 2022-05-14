@@ -1,44 +1,44 @@
-- [1 - Clean Code](#1---clean-code)
-  - [1.1 - Deuda técnica](#11---deuda-técnica)
-  - [1.2 - Refactorización](#12---refactorización)
-  - [1.3 - Código limpio](#13---código-limpio)
-  - [1.4 - Nombres](#14---nombres)
-    - [1.4.1 - Arrays](#141---arrays)
-    - [1.4.2 - Booleans](#142---booleans)
-    - [1.4.3 - Números](#143---números)
-    - [1.4.4 - Funciones](#144---funciones)
-    - [1.4.5 - Clases](#145---clases)
-      - [1.4.5.1 - Estructura de las clases](#1451---estructura-de-las-clases)
-  - [1.5 - DRY (**Don't repeat yourself**)](#15---dry-dont-repeat-yourself)
-  - [1.6 - Comentarios](#16---comentarios)
-- [2 - STUPID](#2---stupid)
-  - [2.1 - Singleton.](#21---singleton)
-  - [2.2 - Tight Coupling.](#22---tight-coupling)
-    - [2.2.1 Cohesión](#221-cohesión)
-    - [2.2.2 Acoplamiento](#222-acoplamiento)
-  - [2.3 Código no probable](#23-código-no-probable)
-  - [2.4 Optimizaciones prematuras](#24-optimizaciones-prematuras)
-  - [2.5 Nombres poco descriptivos](#25-nombres-poco-descriptivos)
-  - [2.6 Duplicidad de código](#26-duplicidad-de-código)
-    - [2.6.1 Duplicidad Real](#261-duplicidad-real)
-    - [2.6.2 Duplicidad Accidental](#262-duplicidad-accidental)
-- [3 - Otros olores](#3---otros-olores)
-  - [3.1 - Inflación](#31---inflación)
-    - [3.1.1 - Métodos](#311---métodos)
-    - [3.1.2 - Clases](#312---clases)
-    - [3.1.3 - Obesisión primitiva](#313---obesisión-primitiva)
-    - [3.1.4 - Lista larga de parámetros](#314---lista-larga-de-parámetros)
-  - [3.2 - Acopladores](#32---acopladores)
-    - [3.2.1 - Feature Envy](#321---feature-envy)
-    - [3.2.2 - Intimidad inapropiada](#322---intimidad-inapropiada)
-    - [3.2.3 - Cadena de mensajes](#323---cadena-de-mensajes)
-    - [3.2.4 - The Middle Man](#324---the-middle-man)
-- [4 - SOLID](#4---solid)
-  - [4.1 - S - Single Responsibility Principle (SRP)](#41---s---single-responsibility-principle-srp)
-  - [4.1 - O - Open/Closed Principle (OCP)](#41---o---openclosed-principle-ocp)
-  - [4.1 - L - Liskov Substitution Principle (LSP)](#41---l---liskov-substitution-principle-lsp)
-  - [4.1 - I - Interface Segregation Principle (ISP)](#41---i---interface-segregation-principle-isp)
-  - [4.1 - D - Dependency Inversion Principle (DIP)](#41---d---dependency-inversion-principle-dip)
+-   [1 - Clean Code](#1---clean-code)
+    -   [1.1 - Deuda técnica](#11---deuda-técnica)
+    -   [1.2 - Refactorización](#12---refactorización)
+    -   [1.3 - Código limpio](#13---código-limpio)
+    -   [1.4 - Nombres](#14---nombres)
+        -   [1.4.1 - Arrays](#141---arrays)
+        -   [1.4.2 - Booleans](#142---booleans)
+        -   [1.4.3 - Números](#143---números)
+        -   [1.4.4 - Funciones](#144---funciones)
+        -   [1.4.5 - Clases](#145---clases)
+            -   [1.4.5.1 - Estructura de las clases](#1451---estructura-de-las-clases)
+    -   [1.5 - DRY (**Don't repeat yourself**)](#15---dry-dont-repeat-yourself)
+    -   [1.6 - Comentarios](#16---comentarios)
+-   [2 - STUPID](#2---stupid)
+    -   [2.1 - Singleton.](#21---singleton)
+    -   [2.2 - Tight Coupling.](#22---tight-coupling)
+        -   [2.2.1 Cohesión](#221-cohesión)
+        -   [2.2.2 Acoplamiento](#222-acoplamiento)
+    -   [2.3 Código no probable](#23-código-no-probable)
+    -   [2.4 Optimizaciones prematuras](#24-optimizaciones-prematuras)
+    -   [2.5 Nombres poco descriptivos](#25-nombres-poco-descriptivos)
+    -   [2.6 Duplicidad de código](#26-duplicidad-de-código)
+        -   [2.6.1 Duplicidad Real](#261-duplicidad-real)
+        -   [2.6.2 Duplicidad Accidental](#262-duplicidad-accidental)
+-   [3 - Otros olores](#3---otros-olores)
+    -   [3.1 - Inflación](#31---inflación)
+        -   [3.1.1 - Métodos](#311---métodos)
+        -   [3.1.2 - Clases](#312---clases)
+        -   [3.1.3 - Obesisión primitiva](#313---obesisión-primitiva)
+        -   [3.1.4 - Lista larga de parámetros](#314---lista-larga-de-parámetros)
+    -   [3.2 - Acopladores](#32---acopladores)
+        -   [3.2.1 - Feature Envy](#321---feature-envy)
+        -   [3.2.2 - Intimidad inapropiada](#322---intimidad-inapropiada)
+        -   [3.2.3 - Cadena de mensajes](#323---cadena-de-mensajes)
+        -   [3.2.4 - The Middle Man](#324---the-middle-man)
+-   [4 - SOLID](#4---solid)
+    -   [4.1 - S - Single Responsibility Principle (SRP)](#41---s---single-responsibility-principle-srp)
+    -   [4.1 - O - Open/Closed Principle (OCP)](#41---o---openclosed-principle-ocp)
+    -   [4.1 - L - Liskov Substitution Principle (LSP)](#41---l---liskov-substitution-principle-lsp)
+    -   [4.1 - I - Interface Segregation Principle (ISP)](#41---i---interface-segregation-principle-isp)
+    -   [4.1 - D - Dependency Inversion Principle (DIP)](#41---d---dependency-inversion-principle-dip)
 
 ## 1 - Clean Code
 
@@ -359,8 +359,37 @@ Establece que las entidades de software (clases, módulos, métodos) deben estar
 
 Se puede lograr también mediante el uso de herencia o mediante patrones de diseó de composición o el patrón de estrategia.
 
+**Detectar violaciones de OPC**
+
+-   Cambios que afectan a nuestra clase o módulo.
+-   Cuando una clase o módulo afecta a muchas capas. (Presetación, almacenamiento, etc...)
+
 ### 4.1 - L - Liskov Substitution Principle (LSP)
+
+**Sustitución de Liskov.**
+
+Las funciones que utilicen punteros o referencias o referencias a clases base deben de ser capaces de usar objetos de clases derivadas sin saberlo.
+
+Siendo U un subtipo de T, cualquier instancia de T debería poder ser sustituida por cualquier instancia de U sin alterar las propiedades del sistema.
 
 ### 4.1 - I - Interface Segregation Principle (ISP)
 
+Este principio establece que los clientes no deberían verse forzados a depender de interfaces que no usan.
+
+-   Si las interfaces que diseñamos nos obligan a violar los principios de responsabilidad única y substitución de Liskov.
+
 ### 4.1 - D - Dependency Inversion Principle (DIP)
+
+Los módulos de alto nivel no deben de depender de módulos de bajo nivel.
+Ambos deben depender de abstracciones.
+Las abstracciones no deben de depender de concreciones.
+Los detalles deben depender de abstracciones.
+
+-   Los módules de alto nivel no deberían depender de m´vodules de bajo nivel.
+-   Ambos deberían depender de abstracciones.
+-   Las abastracciones no deberían depender de detalles.
+-   LOs detalles deberían depender de abstracciones.
+
+LOs components más importantes son aquellos centrados en resolver el problema subyacente al negocio, es decir, la capa de dominio.
+
+Los menos importantes son los que están próximos a la infraestuctura, es decir, aquellos relacionados con la UI, la persistencia, la comunicación con API externas, etc...
